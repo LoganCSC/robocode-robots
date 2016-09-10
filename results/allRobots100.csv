@@ -1,0 +1,38 @@
+Sep 10, 2016 9:07:55 AM
+Results for 100 rounds
+Rank,Robot Name,    Total Score    ,Survival,Surv Bonus,Bullet Dmg,Bullet Bonus,Ram Dmg * 2,Ram Bonus, 1sts , 2nds , 3rds 
+1st,sample.SpinBot,142673 (5%),110250,4620,24201,1033,2494,76,14,8,15
+2nd,com.barrybecker4.SpinBot*,138971 (5%),111300,3960,20345,796,2467,102,12,12,11
+3rd,sample.TrackFire,138125 (4%),106000,1980,26945,3201,0,0,6,7,8
+4th,com.barrybecker4.SpinBot2*,132994 (4%),105050,2310,22121,844,2568,100,7,8,1
+5th,com.barrybecker4.AdvancedTracker*,127970 (4%),98850,1650,22571,2078,2585,236,5,5,8
+6th,com.barrybecker4.Tracker*,126359 (4%),97350,2970,21284,2162,2491,102,9,5,5
+7th,sample.Fire,124633 (4%),105350,2310,15848,846,258,21,8,9,3
+8th,sample.Tracker,121217 (4%),93900,1980,20678,1858,2640,161,6,7,0
+9th,com.barrybecker4.CentricityBot*,119464 (4%),91450,1320,22128,1015,3244,307,4,10,5
+10th,com.barrybecker4.DodgeBot2*,119452 (4%),95200,1650,20422,1005,1106,69,5,3,3
+11th,sample.Walls,117627 (4%),99850,330,15372,519,1543,13,1,5,9
+12th,sample.Corners,114204 (4%),95050,1320,16574,1206,54,0,4,2,4
+13th,com.barrybecker4.DodgeBot*,103777 (3%),85400,1320,15591,524,938,3,4,0,1
+14th,sample.Crazy,96876 (3%),87300,990,6240,37,2282,27,3,2,1
+15th,sampleex.Alien,90392 (3%),83150,330,6189,86,631,5,1,5,4
+16th,sample.MyFirstJuniorRobot,87464 (3%),79050,660,6527,126,1054,48,2,1,1
+17th,sample.PaintingRobot,85430 (3%),78900,330,5607,74,517,2,1,3,3
+18th,sampleex.MasterAndSlave,85204 (3%),79500,0,5148,36,517,3,0,1,0
+19th,sample.MyFirstRobot,84352 (3%),77300,990,5432,70,556,3,3,1,4
+20th,com.barrybecker4.DefenseRobot*,83899 (3%),78000,0,5154,13,721,10,0,0,3
+21st,sampleex.ProxyOfGreyEminence,82733 (3%),76450,660,5046,70,500,6,3,2,1
+22nd,sample.RamFire,82415 (3%),61450,0,14249,342,4699,1675,0,0,1
+23rd,sampleex.AlienComposition,82399 (3%),75650,660,5448,73,568,0,2,1,1
+24th,sampleteam.MyFirstLeader,77557 (3%),75850,0,0,0,1705,2,0,3,3
+25th,sampleteam.MyFirstDroid,75300 (2%),75300,0,0,0,0,0,0,0,1
+26th,com.barrybecker4.SearcherRobot*,74971 (2%),69700,0,4585,35,652,0,0,0,3
+27th,sample.Target,71052 (2%),70800,0,0,0,252,0,0,0,1
+28th,sample.VelociRobot,69805 (2%),57000,0,6102,45,6560,97,0,0,1
+29th,sample.SittingDuck,64100 (2%),64100,0,0,0,0,0,0,0,1
+30th,sample.Interactive,62132 (2%),61650,330,150,2,0,0,1,0,0
+31st,sample.Interactive_v2,61911 (2%),61700,0,154,4,53,0,0,0,0
+32nd,com.barrybecker4.PlainRobot*,42656 (1%),29550,0,2903,65,9949,189,0,0,0
+34th,samplesentry.BorderGuard,0 (0%),0,0,25132,3024,2396,469,0,0,0
+34th,sampleex.Slave,0 (0%),0,0,0,0,0,0,0,0,0
+$

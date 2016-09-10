@@ -35,7 +35,7 @@ public class SpinBot2 extends AdvancedRobot {
 		// Loop forever
 		while (true) {
 			// turn right... a lot.
-            if (Math.random()<0.872)
+            if (Math.random() < 0.872)
 			    setTurnRight(101);
             else
                 setTurnLeft(50);
@@ -45,16 +45,13 @@ public class SpinBot2 extends AdvancedRobot {
 		}
 	}
 
-	/**
-	 * onScannedRobot: Fire hard!
-	 */
+	/** Fire hard! */
 	public void onScannedRobot(ScannedRobotEvent e) {
 		fire(3);
 	}
 
 	/**
-	 * onHitRobot:  If it's our fault, we'll stop turning and moving,
-	 * so we need to turn again to keep spinning.
+	 * If it's our fault, we'll stop turning and moving, so we need to turn again to keep spinning.
 	 */
 	public void onHitRobot(HitRobotEvent e) {
 		if (e.getBearing() > -10 && e.getBearing() < 10) {
@@ -65,10 +62,7 @@ public class SpinBot2 extends AdvancedRobot {
 		}
 	}
 
-
-	/**
-	 * onHitWall: What to do when you hit a wall
-	 */
+	/** What to do when you hit a wall */
 	public void onHitWall(HitWallEvent e) {
 		turnLeft(160);
 		ahead(100);

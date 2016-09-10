@@ -27,23 +27,19 @@ public class SpinBot extends AdvancedRobot {
 	public void run() {
 		// Set colors
 		setBodyColor(Color.orange);
-		setGunColor(Color.blue);
-		setRadarColor(Color.black);
+		setGunColor(Color.green);
 		setScanColor(Color.orange);
 
-		// Loop forever
 		while (true) {
 			setTurnRight(100);
-			setMaxVelocity(20);
+			setMaxVelocity(10);
 			setAhead(110);
-            while(getDistanceRemaining() > 0)
+            while (getDistanceRemaining() > 0)
                 execute();
 		}
 	}
 
-	/**
-	 * onScannedRobot: Fire hard!
-	 */
+	/** Fire hard!*/
 	public void onScannedRobot(ScannedRobotEvent e) {
 		fire(determineFirepower(e.getDistance()));
 	}
@@ -62,8 +58,6 @@ public class SpinBot extends AdvancedRobot {
 
 
     private double determineFirepower(double distance) {
-        double fp =  Math.min(3.0, 600.0 / (distance + 80.0));
-        //System.out.println("dist="+ distance + " firePower=" + fp);
-        return fp;
+        return Math.min(3.0, 600.0 / (distance + 80.0));
     }
 }

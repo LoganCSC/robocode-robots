@@ -27,7 +27,7 @@ public class DebugScanner {
 
     public void paint(AdvancedRobot robot, Graphics2D g) {
         // Set the paint color to a red half transparent color
-        g.setColor(new Color(0xff, 0xff, 0x00, 0x80));
+        g.setColor(new Color(255, 255, 0, 64));
 
         // Draw a line from our robot to the scanned robot
         g.drawLine(scannedX, scannedY, (int)robot.getX(), (int)robot.getY());

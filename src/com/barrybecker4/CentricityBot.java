@@ -51,7 +51,7 @@ public class CentricityBot extends AdvancedRobot {
     }
 
 	/**
-	 * onHitRobot:  If it's our fault, we'll stop turning and moving,
+	 * If it's our fault, we'll stop turning and moving,
 	 * so we need to turn again to keep spinning.
 	 */
 	public void onHitRobot(HitRobotEvent e) {

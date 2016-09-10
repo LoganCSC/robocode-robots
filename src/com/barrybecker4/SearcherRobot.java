@@ -35,10 +35,6 @@ public class SearcherRobot extends AdvancedRobot {
 
 		// Robot main loop
 		while (true) {
-			//setAhead(1);
-			//setTurnRight(20);
-			//setTurnGunRight(20);
-			//turnGunRight(10);
 			setTurnRadarRight(6);
             scan();
 		}

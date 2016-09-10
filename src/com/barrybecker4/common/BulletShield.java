@@ -93,10 +93,10 @@ public class BulletShield {
     }
 
     private void thereAndBack(long time, double deltaEnergy, double bulletAngle, double bulletSpeed) {
-        /* how much time till the next time they can fire? */
+        // how much time till the next time they can fire?
         int minTimeTillNextFire = (int)(Rules.getGunHeat(deltaEnergy) / robotToDefend.getGunCoolingRate());
 
-        /* we have to move there and back, so divide the time we have in half */
+        // we have to move there and back, so divide the time we have in half
         int maxTestDistance = getMaxMoveDistanceForTime(minTimeTillNextFire/2);
 
         double bestDeviation = Double.POSITIVE_INFINITY;
@@ -104,29 +104,29 @@ public class BulletShield {
         double myBulletSpeed = Rules.getBulletSpeed(BULLET_START_POWER);
 
         for (int move = -maxTestDistance; move <= maxTestDistance; ++move) {
-            /* shielding with a move of zero is dangerous and we shouldn't attempt it */
+            // shielding with a move of zero is dangerous and we shouldn't attempt it
             if (move == 0)
                 continue;
 
-            /* calculate where we will be when we finish moving */
+            // calculate where we will be when we finish moving
             Point2D myFirePosition = getMoveEnd(move);
 
-            /* determine how long it will take to get there */
+            // determine how long it will take to get there
             long timeToMove = TIME_TO_MOVE[Math.abs(move)];
 
-            /* the bullet position at the time time we start */
+            // the bullet position at the time time we start
             Point2D bulletStart = project(lastPosition, bulletAngle, bulletSpeed*(timeToMove+1));
 
-            /* calculate our target position */
+            // calculate our target position
             Point2D target = intercept(myFirePosition, myBulletSpeed, bulletStart, bulletAngle, bulletSpeed);
 
             double eGoalTime = Math.ceil(bulletStart.distance(target) / bulletSpeed);
 
-            /* Update our target */
+            // update target *
             target = project(bulletStart, bulletAngle, (eGoalTime-0.5)*bulletSpeed);
             double myGunAim = angleFromTo(myFirePosition, target);
 
-            /* determine if they intersect */
+            // determine if they intersect
             Line2D eLine = new Line2D.Double(
                     project(bulletStart, bulletAngle, bulletSpeed*(eGoalTime-1)),
                     project(bulletStart, bulletAngle, bulletSpeed*eGoalTime)
@@ -159,7 +159,7 @@ public class BulletShield {
                     robotToDefend.setAhead(lastMoveDistance);
                 }
             }
-        } /* for (int move ... */
+        } // for int move ...
     }
 
     public void bulletHit(Bullet bullet) {

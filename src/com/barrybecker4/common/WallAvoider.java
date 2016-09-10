@@ -26,7 +26,7 @@ public class WallAvoider {
         double y = robot.getY();
         double heading = robot.getHeading();
 
-        if (x < rightWall/6) {        // close to left wall
+        if (x < rightWall / 6) {        // close to left wall
             if (heading > 270) {
                 robot.turnRight(AVOIDANCE_TURN);
             }
@@ -35,7 +35,7 @@ public class WallAvoider {
             }
         }
 
-        else if (x > rightWall * 5.0/6.0) {  // close to right wall
+        else if (x > rightWall * 5.0 / 6.0) {  // close to right wall
             if (heading < 90) {
                 robot.turnLeft(AVOIDANCE_TURN);
             }
@@ -53,7 +53,7 @@ public class WallAvoider {
             }
         }
 
-        else if (y > 5.0 * topWall /6.0) {  // close to top wall
+        else if (y > 5.0 * topWall / 6.0) {  // close to top wall
             if (heading < 90) {
                 robot.turnRight(AVOIDANCE_TURN);
             }

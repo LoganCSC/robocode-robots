@@ -25,7 +25,7 @@ public class DefenseRobot extends AdvancedRobot {
 
 		setBulletColor(Color.yellow);
 		setScanColor(new Color(100, 200, 100, 230));
-		setColors(new Color(10, 70, 40), new Color(120, 100, 30), new Color(80, 90, 200)); // body,gun,radar
+		setColors(new Color(10, 70, 40), new Color(120, 100, 30), new Color(80, 90, 200)); // body, gun, radar
 
         setAdjustGunForRobotTurn(true);
 		setAdjustRadarForGunTurn(true);
@@ -50,7 +50,7 @@ public class DefenseRobot extends AdvancedRobot {
 	public void onScannedRobot(ScannedRobotEvent e) {
 
         shield.bulletDefense(e);
-        if (Math.random() <0.3)
+        if (Math.random() < 0.3)
             this.setFire(1.0);
 
         scanner.calcLastScanned(this, e);

@@ -31,7 +31,7 @@ public class DodgeBot extends AdvancedRobot  {
         }
         // When a bot is spotted, sweep the gun and radar
         gunDirection = -gunDirection;
-        setTurnGunRight(99999* gunDirection);
+        setTurnGunRight(99999 * gunDirection);
 
         // Fire directly at target
         fire(2) ;

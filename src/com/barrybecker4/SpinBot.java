@@ -17,15 +17,15 @@ import java.awt.Color;
  * Best so far.
  * SpinBot - a sample robot by Mathew Nelson.
  * <p/>
- * Moves in a circle, firing hard when an enemy is detected.
+ * Moves in a randome circle, firing hard when an enemy is detected.
  *
  * @author Mathew A. Nelson (original)
  * @author Flemming N. Larsen (contributor)
+ * @author Barry Becker (contributor)
  */
 public class SpinBot extends AdvancedRobot {
 
 	public void run() {
-		// Set colors
 		setBodyColor(Color.orange);
 		setGunColor(Color.green);
 		setScanColor(Color.orange);
@@ -34,14 +34,15 @@ public class SpinBot extends AdvancedRobot {
 			setTurnRight(100);
 			setMaxVelocity(10);
 			setAhead(110);
-            while (getDistanceRemaining() > 0)
+			execute();
+            while (getDistanceRemaining() > 0 && getTurnRemaining() > 0)
                 execute();
 		}
 	}
 
 	/** Fire hard!*/
 	public void onScannedRobot(ScannedRobotEvent e) {
-		fire(determineFirepower(e.getDistance()));
+		setFire(determineFirepower(e.getDistance()));
 	}
 
 	/**
@@ -49,10 +50,10 @@ public class SpinBot extends AdvancedRobot {
 	 */
 	public void onHitRobot(HitRobotEvent e) {
 		if (e.getBearing() > -10 && e.getBearing() < 10) {
-			fire(3);
+			setFire(3);
 		}
 		if (e.isMyFault()) {
-			turnRight(10);
+			setTurnRight(10);
 		}
 	}
 

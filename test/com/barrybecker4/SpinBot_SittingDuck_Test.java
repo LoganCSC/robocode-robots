@@ -2,6 +2,8 @@ package com.barrybecker4;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+
+import org.junit.runner.Result;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import robocode.BattleResults;
@@ -9,10 +11,14 @@ import robocode.control.events.BattleCompletedEvent;
 import robocode.control.testing.RobotTestBed;
 
 /**
- *
+ *  See
+ *  https://github.com/jaros/robocode/blob/master/plugins/testing/robocode.testing.api/src/main/java/robocode/control/testing/RobotTestBed.java
  */
 @RunWith(JUnit4.class)
-public class SpinBotTest extends RobotTestBed {
+public class SpinBot_SittingDuck_Test extends RobotTestBed {
+
+  private ResultReporter reporter = new ResultReporter();
+
   /**
    * The names of the robots that want battling is specified.
    * @return The names of the robots we want battling.
@@ -40,14 +46,12 @@ public class SpinBotTest extends RobotTestBed {
   public void onBattleCompleted(BattleCompletedEvent event) {
     // Return the results in order of getRobotNames.
     BattleResults[] battleResults = event.getIndexedResults();
-    for (BattleResults results : battleResults) {
-      System.out.println("res  firsts=" + results.getFirsts() + " score:" + results.getScore() + " nm=" + results.getTeamLeaderName());
-    }
+    reporter.showReport(battleResults);
+
     BattleResults results = battleResults[1];
     String robotName = results.getTeamLeaderName();
     assertEquals("Check that results[1] is SpinBot", "com.barrybecker4.SpinBot*", robotName);
 
-    // Check to make sure SpinBot won at least won over half the rounds.
-    assertTrue("Check SpinBot winner", getNumRounds() / 5 < results.getFirsts());
+    assertEquals("Check SpinBot winner", getNumRounds(), results.getFirsts());
   }
 }

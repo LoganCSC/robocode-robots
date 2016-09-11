@@ -26,22 +26,22 @@ import java.awt.Color;
 public class SpinBot2 extends AdvancedRobot {
 
 	public void run() {
-		// Set colors
 		setBodyColor(Color.orange);
 		setGunColor(Color.blue);
 		setRadarColor(Color.black);
 		setScanColor(Color.orange);
 
-		// Loop forever
 		while (true) {
 			// turn right... a lot.
             if (Math.random() < 0.872)
 			    setTurnRight(101);
             else
                 setTurnLeft(50);
-			// Limit our speed to 5
 			setMaxVelocity(10);
-			ahead(50);
+			setAhead(50);
+			execute();
+            while (getDistanceRemaining() > 0 && getTurnRemaining() > 0)
+                execute();
 		}
 	}
 
@@ -54,12 +54,13 @@ public class SpinBot2 extends AdvancedRobot {
 	 * If it's our fault, we'll stop turning and moving, so we need to turn again to keep spinning.
 	 */
 	public void onHitRobot(HitRobotEvent e) {
+		/*
 		if (e.getBearing() > -10 && e.getBearing() < 10) {
-			fire(2);
+			fire(1);
 		}
 		if (e.isMyFault()) {
 			turnRight(5);
-		}
+		}*/
 	}
 
 	/** What to do when you hit a wall */

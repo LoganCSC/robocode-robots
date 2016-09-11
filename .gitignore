@@ -1,3 +1,9 @@
 .idea/
 /out/
+/classes/
 robots.iml
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
